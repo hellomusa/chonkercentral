@@ -1,0 +1,404 @@
+{
+  "librarySpots": [
+    {
+      "eid": "26867",
+      "room": "324A",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. At the back of the large study space near the elevators, on the left. Elevator or stair access required.",
+      "link": "https://carletonu.libcal.com/space/26867",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26868",
+      "room": "324B",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. At the back of the large study space near the elevators, and to the left. Elevator or stair access required.",
+      "link": "https://carletonu.libcal.com/space/26868",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26869",
+      "room": "324C",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. To the left and near the front of the large study area near the elevators. Elevator or stair access required.",
+      "link": "https://carletonu.libcal.com/space/26869",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26870",
+      "room": "324D",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. To the left and near the front of the large study area near the elevators. Elevator or stair access required.",
+      "link": "https://carletonu.libcal.com/space/26870",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26889",
+      "room": "561",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, and on the left side.",
+      "link": "https://carletonu.libcal.com/space/26889",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26890",
+      "room": "562",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, and on the left side.",
+      "link": "https://carletonu.libcal.com/space/26890",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26891",
+      "room": "563",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, and on the left side.",
+      "link": "https://carletonu.libcal.com/space/26891",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26892",
+      "room": "564",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, and on the left side.",
+      "link": "https://carletonu.libcal.com/space/26892",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26893",
+      "room": "565",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, and on the left side.",
+      "link": "https://carletonu.libcal.com/space/26893",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26894",
+      "room": "566",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, and on the left side.",
+      "link": "https://carletonu.libcal.com/space/26894",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26895",
+      "room": "567",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, and on the left side.",
+      "link": "https://carletonu.libcal.com/space/26895",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26896",
+      "room": "568",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, and on the left side.",
+      "link": "https://carletonu.libcal.com/space/26896",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26897",
+      "room": "569",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, and on the left side.",
+      "link": "https://carletonu.libcal.com/space/26897",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26898",
+      "room": "570",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, at the very back and to the left.",
+      "link": "https://carletonu.libcal.com/space/26898",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26899",
+      "room": "571",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, at the very back and to the left.",
+      "link": "https://carletonu.libcal.com/space/26899",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26900",
+      "room": "572",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, at the very back and to the left.",
+      "link": "https://carletonu.libcal.com/space/26900",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26901",
+      "room": "573",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, at the very back and to the left.",
+      "link": "https://carletonu.libcal.com/space/26901",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26902",
+      "room": "574",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad, at the very back and to the left.",
+      "link": "https://carletonu.libcal.com/space/26902",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26975",
+      "room": "234A",
+      "capacity": 5,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the elevators and to the left of the Book Arts Lab,",
+      "link": "https://carletonu.libcal.com/space/26975",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26976",
+      "room": "234B",
+      "capacity": 5,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the elevators and to the left of the Book Arts Lab,",
+      "link": "https://carletonu.libcal.com/space/26976",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26977",
+      "room": "234C",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the elevators, past the Book Arts Lab, and to the left.",
+      "link": "https://carletonu.libcal.com/space/26977",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26978",
+      "room": "234D",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the elevators, past the Book Arts Lab, and to the left.",
+      "link": "https://carletonu.libcal.com/space/26978",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26883",
+      "room": "420",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Near Stairwell A.",
+      "link": "https://carletonu.libcal.com/space/26883",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26884",
+      "room": "421",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Near Stairwell A.",
+      "link": "https://carletonu.libcal.com/space/26884",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26885",
+      "room": "422",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Near Stairwell A.",
+      "link": "https://carletonu.libcal.com/space/26885",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26886",
+      "room": "423",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Near Stairwell B.",
+      "link": "https://carletonu.libcal.com/space/26886",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26887",
+      "room": "424",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Near Stairwell B.",
+      "link": "https://carletonu.libcal.com/space/26887",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26888",
+      "room": "425",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Near Stairwell B.",
+      "link": "https://carletonu.libcal.com/space/26888",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26871",
+      "room": "462",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Near the IT Help Desk.",
+      "link": "https://carletonu.libcal.com/space/26871",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26872",
+      "room": "463",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Near the IT Help Desk.",
+      "link": "https://carletonu.libcal.com/space/26872",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26873",
+      "room": "464",
+      "capacity": 8,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Near the IT Help Desk.",
+      "link": "https://carletonu.libcal.com/space/26873",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26874",
+      "room": "465",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the IT Help Desk.",
+      "link": "https://carletonu.libcal.com/space/26874",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26875",
+      "room": "466",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the IT Help Desk.",
+      "link": "https://carletonu.libcal.com/space/26875",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26876",
+      "room": "467 (VR compatible)",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the IT Help Desk.",
+      "link": "https://carletonu.libcal.com/space/26876",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26877",
+      "room": "468",
+      "capacity": 8,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the IT Help Desk.",
+      "link": "https://carletonu.libcal.com/space/26877",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26878",
+      "room": "469 (VR compatible)",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the IT Help Desk.",
+      "link": "https://carletonu.libcal.com/space/26878",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26879",
+      "room": "470",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the IT Help Desk.",
+      "link": "https://carletonu.libcal.com/space/26879",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26880",
+      "room": "471",
+      "capacity": 6,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the IT Help Desk.",
+      "link": "https://carletonu.libcal.com/space/26880",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26881",
+      "room": "472",
+      "capacity": 4,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the IT Help Desk, at the very back.",
+      "link": "https://carletonu.libcal.com/space/26881",
+      "lat": 45.3819,
+      "lng": -75.6996
+    },
+    {
+      "eid": "26882",
+      "room": "473",
+      "capacity": 5,
+      "hasPower": 1,
+      "directions": "Located in the back of the building, away from the quad. Past the IT Help Desk, at the very back.",
+      "link": "https://carletonu.libcal.com/space/26882",
+      "lat": 45.3819,
+      "lng": -75.6996
+    }
+  ]
+}
