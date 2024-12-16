@@ -1,10 +1,10 @@
-import { StudySpot } from '@prisma/client';
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Users } from 'lucide-react';
+import { StudySpot } from '@prisma/client'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Users } from 'lucide-react'
 
 interface StudySpotCardProps {
-  spot: StudySpot;
+  spot: StudySpot
 }
 
 export function StudySpotCard({ spot }: StudySpotCardProps) {
@@ -23,7 +23,9 @@ export function StudySpotCard({ spot }: StudySpotCardProps) {
       )}
       <CardContent className="p-3">
         <h4 className="font-bold">{spot.building}</h4>
-        <p className="text-sm text-muted-foreground line-clamp-2">{spot.location}</p>
+        <p className="text-sm text-muted-foreground line-clamp-2">
+          {spot.location}
+        </p>
         <div className="flex flex-wrap gap-1 mt-2">
           <Badge variant="outline" className="h-6 px-2">
             <Users className="mr-1 h-3 w-3" />
@@ -37,5 +39,5 @@ export function StudySpotCard({ spot }: StudySpotCardProps) {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

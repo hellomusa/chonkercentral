@@ -1,32 +1,32 @@
-import type { LibrarySpot, StudySpot } from '@prisma/client';
+import type { LibrarySpot, StudySpot } from '@prisma/client'
 
 export interface BuildingSpots {
-  building: string;
+  building: string
   coordinates: {
-    lat: number;
-    lng: number;
-  };
-  librarySpots: LibrarySpot[];
-  studySpots: StudySpot[];
+    lat: number
+    lng: number
+  }
+  librarySpots: LibrarySpot[]
+  studySpots: StudySpot[]
 }
 
 export function groupSpotsByBuilding(
   librarySpots: LibrarySpot[],
   studySpots: StudySpot[]
 ): BuildingSpots[] {
-  const buildingsMap = new Map<string, BuildingSpots>();
+  const buildingsMap = new Map<string, BuildingSpots>()
 
   // Group library spots (assuming they're all in "MacOdrum Library")
   if (librarySpots.length > 0) {
-    buildingsMap.set("MacOdrum Library", {
-      building: "MacOdrum Library",
+    buildingsMap.set('MacOdrum Library', {
+      building: 'MacOdrum Library',
       coordinates: {
         lat: librarySpots[0].lat,
         lng: librarySpots[0].lng,
       },
       librarySpots: librarySpots,
       studySpots: [],
-    });
+    })
   }
 
   // Group study spots by building
@@ -40,10 +40,10 @@ export function groupSpotsByBuilding(
         },
         librarySpots: [],
         studySpots: [],
-      });
+      })
     }
-    buildingsMap.get(spot.building)!.studySpots.push(spot);
-  });
+    buildingsMap.get(spot.building)!.studySpots.push(spot)
+  })
 
-  return Array.from(buildingsMap.values());
+  return Array.from(buildingsMap.values())
 }

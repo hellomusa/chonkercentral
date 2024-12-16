@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import {
   Sidebar,
   SidebarContent,
@@ -10,101 +10,108 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarSeparator,
-} from '@/components/ui/sidebar';
-import { ChevronRight, Search } from 'lucide-react';
+} from '@/components/ui/sidebar'
+import { ChevronRight, Search } from 'lucide-react'
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { Badge } from "@/components/ui/badge"
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Switch } from '@/components/ui/switch';
-import LibrarySpotCard from './library-spot-card';
-import { StudySpotCard } from './study-spot-card';
-import { cn } from '@/lib/utils';
-import type { LibrarySpot, StudySpot } from '@prisma/client';
+} from '@/components/ui/collapsible'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Switch } from '@/components/ui/switch'
+import LibrarySpotCard from './library-spot-card'
+import { StudySpotCard } from './study-spot-card'
+import { cn } from '@/lib/utils'
+import type { LibrarySpot, StudySpot } from '@prisma/client'
 
 interface SpotsSidebarProps {
-  initialLibrarySpots: LibrarySpot[];
-  initialOtherSpots: StudySpot[];
-  selectedBuilding: string | null;
-  onBuildingSelect: (building: string | null) => void;
+  initialLibrarySpots: LibrarySpot[]
+  initialOtherSpots: StudySpot[]
+  selectedBuilding: string | null
+  onBuildingSelect: (building: string | null) => void
 }
 
-export function SpotsSidebar({ 
+export function SpotsSidebar({
   initialLibrarySpots,
   initialOtherSpots,
   selectedBuilding,
-  onBuildingSelect
+  onBuildingSelect,
 }: SpotsSidebarProps) {
-  const [librarySpots, setLibrarySpots] = useState<LibrarySpot[]>(initialLibrarySpots);
-  const [otherSpots, setOtherSpots] = useState<StudySpot[]>(initialOtherSpots);
-  const [showOnlyAvailable, setShowOnlyAvailable] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedTime, setSelectedTime] = useState<Date>(new Date());
-  const [showAllLibrarySpots, setShowAllLibrarySpots] = useState(false);
-  const [showAllOtherSpots, setShowAllOtherSpots] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [librarySpots, setLibrarySpots] =
+    useState<LibrarySpot[]>(initialLibrarySpots)
+  const [otherSpots, setOtherSpots] = useState<StudySpot[]>(initialOtherSpots)
+  const [showOnlyAvailable, setShowOnlyAvailable] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedTime, setSelectedTime] = useState<Date>(new Date())
+  const [showAllLibrarySpots, setShowAllLibrarySpots] = useState(false)
+  const [showAllOtherSpots, setShowAllOtherSpots] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const buildingIsLibrary = selectedBuilding === 'MacOdrum Library';
-  
-  const INITIAL_SPOTS_TO_SHOW = 5;
+  const buildingIsLibrary = selectedBuilding === 'MacOdrum Library'
+
+  const INITIAL_SPOTS_TO_SHOW = 5
 
   useEffect(() => {
     async function updateAvailability() {
       if (!buildingIsLibrary) {
-        setLibrarySpots(initialLibrarySpots);
-        return;
+        setLibrarySpots(initialLibrarySpots)
+        return
       }
-      
+
       try {
-        setIsLoading(true);
-        const response = await fetch(`/api/library-spots?date=${selectedTime.toISOString()}`);
-        if (!response.ok) throw new Error('Failed to fetch availability');
-        
-        const updatedSpots = await response.json();
-        setLibrarySpots(updatedSpots);
-        setError(null);
+        setIsLoading(true)
+        const response = await fetch(
+          `/api/library-spots?date=${selectedTime.toISOString()}`
+        )
+        if (!response.ok) throw new Error('Failed to fetch availability')
+
+        const updatedSpots = await response.json()
+        setLibrarySpots(updatedSpots)
+        setError(null)
       } catch (err) {
-        console.error('Availability error:', err);
-        setError('Failed to fetch availability');
+        console.error('Availability error:', err)
+        setError('Failed to fetch availability')
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
     }
-    updateAvailability();
-  }, [selectedTime, buildingIsLibrary, initialLibrarySpots]);
+    updateAvailability()
+  }, [selectedTime, buildingIsLibrary, initialLibrarySpots])
 
-  const filteredLibrarySpots = librarySpots.filter(spot =>
-    (selectedBuilding === null || selectedBuilding === 'MacOdrum Library') &&
-    spot.room.toLowerCase().includes(searchQuery.toLowerCase()) &&
-    (!showOnlyAvailable || spot.isAvailable)
-  );
+  const filteredLibrarySpots = librarySpots.filter(
+    (spot) =>
+      (selectedBuilding === null || selectedBuilding === 'MacOdrum Library') &&
+      spot.room.toLowerCase().includes(searchQuery.toLowerCase()) &&
+      (!showOnlyAvailable || spot.isAvailable)
+  )
 
-  const filteredOtherSpots = otherSpots.filter(spot =>
-    (selectedBuilding === null || spot.building === selectedBuilding) &&
-    (spot.building.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    spot.location.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
+  const filteredOtherSpots = otherSpots.filter(
+    (spot) =>
+      (selectedBuilding === null || spot.building === selectedBuilding) &&
+      (spot.building.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        spot.location.toLowerCase().includes(searchQuery.toLowerCase()))
+  )
 
   // Get visible spots based on show all state
-  const visibleLibrarySpots = showAllLibrarySpots 
-    ? filteredLibrarySpots 
-    : filteredLibrarySpots.slice(0, INITIAL_SPOTS_TO_SHOW);
+  const visibleLibrarySpots = showAllLibrarySpots
+    ? filteredLibrarySpots
+    : filteredLibrarySpots.slice(0, INITIAL_SPOTS_TO_SHOW)
 
-  const visibleOtherSpots = showAllOtherSpots 
-    ? filteredOtherSpots 
-    : filteredOtherSpots.slice(0, INITIAL_SPOTS_TO_SHOW);
+  const visibleOtherSpots = showAllOtherSpots
+    ? filteredOtherSpots
+    : filteredOtherSpots.slice(0, INITIAL_SPOTS_TO_SHOW)
 
   return (
     <Sidebar>
       <SidebarContent>
         <div className="px-6 py-6">
           <h1 className="text-2xl font-bold tracking-tight">CU Study Spots</h1>
-          <p className="text-sm text-muted-foreground mt-1">Find your perfect study space</p>
+          <p className="text-sm text-muted-foreground mt-1">
+            Find your perfect study space
+          </p>
         </div>
 
         <SidebarSeparator />
@@ -121,7 +128,8 @@ export function SpotsSidebar({
           </div>
         </div>
 
-        {(selectedBuilding === null || selectedBuilding === 'MacOdrum Library') && (
+        {(selectedBuilding === null ||
+          selectedBuilding === 'MacOdrum Library') && (
           <Collapsible defaultOpen className="group/collapsible">
             <SidebarGroup>
               <SidebarGroupLabel
@@ -136,7 +144,7 @@ export function SpotsSidebar({
                   <ChevronRight className="ml-2 h-4 w-4 shrink-0 transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                 </CollapsibleTrigger>
               </SidebarGroupLabel>
-              <CollapsibleContent className={cn("space-y-4 px-4 py-3")}>
+              <CollapsibleContent className={cn('space-y-4 px-4 py-3')}>
                 <SidebarGroupContent>
                   {buildingIsLibrary && (
                     <>
@@ -170,12 +178,13 @@ export function SpotsSidebar({
                       <Button
                         variant="ghost"
                         className="w-full mt-2"
-                        onClick={() => setShowAllLibrarySpots(!showAllLibrarySpots)}
-                      >
-                        {showAllLibrarySpots 
-                          ? `Show Less (${INITIAL_SPOTS_TO_SHOW} of ${filteredLibrarySpots.length})`
-                          : `Show All (${filteredLibrarySpots.length})`
+                        onClick={() =>
+                          setShowAllLibrarySpots(!showAllLibrarySpots)
                         }
+                      >
+                        {showAllLibrarySpots
+                          ? `Show Less (${INITIAL_SPOTS_TO_SHOW} of ${filteredLibrarySpots.length})`
+                          : `Show All (${filteredLibrarySpots.length})`}
                       </Button>
                     )}
                   </SidebarMenu>
@@ -187,7 +196,8 @@ export function SpotsSidebar({
 
         <SidebarSeparator />
 
-        {(selectedBuilding === null || selectedBuilding !== 'MacOdrum Library') && (
+        {(selectedBuilding === null ||
+          selectedBuilding !== 'MacOdrum Library') && (
           <Collapsible defaultOpen className="group/collapsible">
             <SidebarGroup>
               <SidebarGroupLabel
@@ -202,7 +212,7 @@ export function SpotsSidebar({
                   <ChevronRight className="ml-2 h-4 w-4 shrink-0 transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                 </CollapsibleTrigger>
               </SidebarGroupLabel>
-              <CollapsibleContent className={cn("space-y-4 px-4 py-3")}>
+              <CollapsibleContent className={cn('space-y-4 px-4 py-3')}>
                 <SidebarGroupContent>
                   <SidebarMenu className="space-y-1">
                     {visibleOtherSpots.map((spot) => (
@@ -217,10 +227,9 @@ export function SpotsSidebar({
                         className="w-full mt-2"
                         onClick={() => setShowAllOtherSpots(!showAllOtherSpots)}
                       >
-                        {showAllOtherSpots 
+                        {showAllOtherSpots
                           ? `Show Less (${INITIAL_SPOTS_TO_SHOW} of ${filteredOtherSpots.length})`
-                          : `Show All (${filteredOtherSpots.length})`
-                        }
+                          : `Show All (${filteredOtherSpots.length})`}
                       </Button>
                     )}
                   </SidebarMenu>
@@ -231,6 +240,5 @@ export function SpotsSidebar({
         )}
       </SidebarContent>
     </Sidebar>
-  );
+  )
 }
-
